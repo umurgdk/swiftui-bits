@@ -14,6 +14,10 @@
 		A958D8FD2A34E505008C913F /* LiquidTube.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9396E6E2A320C0E006C8AF9 /* LiquidTube.swift */; };
 		A958D8FE2A34E54A008C913F /* Wave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F00D672A32DE0B004831F3 /* Wave.swift */; };
 		A958D9012A34E59F008C913F /* Liquid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958D9002A34E59F008C913F /* Liquid.swift */; };
+		A958D9092A3500A5008C913F /* StepCarouselApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958D9082A3500A5008C913F /* StepCarouselApp.swift */; };
+		A958D90B2A3500A5008C913F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958D90A2A3500A5008C913F /* ContentView.swift */; };
+		A958D90D2A3500A7008C913F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A958D90C2A3500A7008C913F /* Assets.xcassets */; };
+		A958D9102A3500A7008C913F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A958D90F2A3500A7008C913F /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +28,23 @@
 		A958D8F52A34E359008C913F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A958D8F82A34E359008C913F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A958D9002A34E59F008C913F /* Liquid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Liquid.swift; sourceTree = "<group>"; };
+		A958D9062A3500A5008C913F /* StepCarousel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCarousel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A958D9082A3500A5008C913F /* StepCarouselApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCarouselApp.swift; sourceTree = "<group>"; };
+		A958D90A2A3500A5008C913F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A958D90C2A3500A7008C913F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A958D90F2A3500A7008C913F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9F00D672A32DE0B004831F3 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A958D8EC2A34E358008C913F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A958D9032A3500A5008C913F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				A958D8F02A34E358008C913F /* Heater */,
+				A958D9072A3500A5008C913F /* StepCarousel */,
 				A9396E5C2A320B95006C8AF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A958D8EF2A34E358008C913F /* Heater.app */,
+				A958D9062A3500A5008C913F /* StepCarousel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +102,33 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A958D9072A3500A5008C913F /* StepCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				A958D9142A3500CA008C913F /* Views */,
+				A958D9082A3500A5008C913F /* StepCarouselApp.swift */,
+				A958D90A2A3500A5008C913F /* ContentView.swift */,
+				A958D90C2A3500A7008C913F /* Assets.xcassets */,
+				A958D90E2A3500A7008C913F /* Preview Content */,
+			);
+			path = StepCarousel;
+			sourceTree = "<group>";
+		};
+		A958D90E2A3500A7008C913F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A958D90F2A3500A7008C913F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A958D9142A3500CA008C913F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,6 +149,23 @@
 			productReference = A958D8EF2A34E358008C913F /* Heater.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A958D9052A3500A5008C913F /* StepCarousel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A958D9112A3500A7008C913F /* Build configuration list for PBXNativeTarget "StepCarousel" */;
+			buildPhases = (
+				A958D9022A3500A5008C913F /* Sources */,
+				A958D9032A3500A5008C913F /* Frameworks */,
+				A958D9042A3500A5008C913F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StepCarousel;
+			productName = StepCarousel;
+			productReference = A958D9062A3500A5008C913F /* StepCarousel.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -115,6 +177,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					A958D8EE2A34E358008C913F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					A958D9052A3500A5008C913F = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -133,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				A958D8EE2A34E358008C913F /* Heater */,
+				A958D9052A3500A5008C913F /* StepCarousel */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +210,15 @@
 			files = (
 				A958D8F92A34E359008C913F /* Preview Assets.xcassets in Resources */,
 				A958D8F62A34E359008C913F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A958D9042A3500A5008C913F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A958D9102A3500A7008C913F /* Preview Assets.xcassets in Resources */,
+				A958D90D2A3500A7008C913F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +234,15 @@
 				A958D8FD2A34E505008C913F /* LiquidTube.swift in Sources */,
 				A958D8F42A34E358008C913F /* ContentView.swift in Sources */,
 				A958D8F22A34E358008C913F /* HeaterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A958D9022A3500A5008C913F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A958D90B2A3500A5008C913F /* ContentView.swift in Sources */,
+				A958D9092A3500A5008C913F /* StepCarouselApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +425,75 @@
 			};
 			name = Release;
 		};
+		A958D9122A3500A7008C913F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StepCarousel/Preview Content\"";
+				DEVELOPMENT_TEAM = 8STHWE4QY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.swiftuibits.StepCarousel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A958D9132A3500A7008C913F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StepCarousel/Preview Content\"";
+				DEVELOPMENT_TEAM = 8STHWE4QY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.swiftuibits.StepCarousel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -358,6 +511,15 @@
 			buildConfigurations = (
 				A958D8FA2A34E359008C913F /* Debug */,
 				A958D8FB2A34E359008C913F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A958D9112A3500A7008C913F /* Build configuration list for PBXNativeTarget "StepCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A958D9122A3500A7008C913F /* Debug */,
+				A958D9132A3500A7008C913F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
