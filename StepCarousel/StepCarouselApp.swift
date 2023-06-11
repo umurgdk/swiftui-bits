@@ -8,10 +8,17 @@
 import SwiftUI
 
 @main
+@MainActor
 struct StepCarouselApp: App {
+    let imageLoader = ImageLoader()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(imageLoader)
+                .onAppear {
+                    imageLoader.prefetch(urls: reviews.map(\.product.image))
+                    imageLoader.prefetch(urls: reviews.map(\.author.avatar))
+                }
         }
     }
 }
