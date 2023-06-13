@@ -26,6 +26,11 @@
 		A98DFB702A361C9F001630D0 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB6F2A361C9F001630D0 /* ProductCard.swift */; };
 		A98DFB722A361CF8001630D0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB712A361CF8001630D0 /* Data.swift */; };
 		A98DFB742A387193001630D0 /* ProductCarouselTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB732A387193001630D0 /* ProductCarouselTransition.swift */; };
+		A98DFB7C2A38ADBF001630D0 /* NixieTubeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB7B2A38ADBF001630D0 /* NixieTubeApp.swift */; };
+		A98DFB7E2A38ADBF001630D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB7D2A38ADBF001630D0 /* ContentView.swift */; };
+		A98DFB802A38ADC1001630D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98DFB7F2A38ADC1001630D0 /* Assets.xcassets */; };
+		A98DFB832A38ADC1001630D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98DFB822A38ADC1001630D0 /* Preview Assets.xcassets */; };
+		A98DFB882A38CCB8001630D0 /* NixieNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB872A38CCB8001630D0 /* NixieNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,12 @@
 		A98DFB6F2A361C9F001630D0 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		A98DFB712A361CF8001630D0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A98DFB732A387193001630D0 /* ProductCarouselTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCarouselTransition.swift; sourceTree = "<group>"; };
+		A98DFB792A38ADBF001630D0 /* NixieTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NixieTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98DFB7B2A38ADBF001630D0 /* NixieTubeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NixieTubeApp.swift; sourceTree = "<group>"; };
+		A98DFB7D2A38ADBF001630D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A98DFB7F2A38ADC1001630D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A98DFB822A38ADC1001630D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A98DFB872A38CCB8001630D0 /* NixieNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NixieNumber.swift; sourceTree = "<group>"; };
 		A9F00D672A32DE0B004831F3 /* Wave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A98DFB762A38ADBF001630D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +93,7 @@
 			children = (
 				A958D8F02A34E358008C913F /* Heater */,
 				A958D9072A3500A5008C913F /* StepCarousel */,
+				A98DFB7A2A38ADBF001630D0 /* NixieTube */,
 				A9396E5C2A320B95006C8AF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +103,7 @@
 			children = (
 				A958D8EF2A34E358008C913F /* Heater.app */,
 				A958D9062A3500A5008C913F /* StepCarousel.app */,
+				A98DFB792A38ADBF001630D0 /* NixieTube.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +173,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A98DFB7A2A38ADBF001630D0 /* NixieTube */ = {
+			isa = PBXGroup;
+			children = (
+				A98DFB7B2A38ADBF001630D0 /* NixieTubeApp.swift */,
+				A98DFB7D2A38ADBF001630D0 /* ContentView.swift */,
+				A98DFB7F2A38ADC1001630D0 /* Assets.xcassets */,
+				A98DFB812A38ADC1001630D0 /* Preview Content */,
+				A98DFB872A38CCB8001630D0 /* NixieNumber.swift */,
+			);
+			path = NixieTube;
+			sourceTree = "<group>";
+		};
+		A98DFB812A38ADC1001630D0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A98DFB822A38ADC1001630D0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +230,23 @@
 			productReference = A958D9062A3500A5008C913F /* StepCarousel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A98DFB782A38ADBF001630D0 /* NixieTube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98DFB862A38ADC1001630D0 /* Build configuration list for PBXNativeTarget "NixieTube" */;
+			buildPhases = (
+				A98DFB752A38ADBF001630D0 /* Sources */,
+				A98DFB762A38ADBF001630D0 /* Frameworks */,
+				A98DFB772A38ADBF001630D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NixieTube;
+			productName = NixieTube;
+			productReference = A98DFB792A38ADBF001630D0 /* NixieTube.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +261,9 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					A958D9052A3500A5008C913F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					A98DFB782A38ADBF001630D0 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -223,6 +283,7 @@
 			targets = (
 				A958D8EE2A34E358008C913F /* Heater */,
 				A958D9052A3500A5008C913F /* StepCarousel */,
+				A98DFB782A38ADBF001630D0 /* NixieTube */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +304,15 @@
 			files = (
 				A958D9102A3500A7008C913F /* Preview Assets.xcassets in Resources */,
 				A958D90D2A3500A7008C913F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98DFB772A38ADBF001630D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98DFB832A38ADC1001630D0 /* Preview Assets.xcassets in Resources */,
+				A98DFB802A38ADC1001630D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +345,16 @@
 				A98DFB6C2A361B73001630D0 /* ReviewCarouselButtonStyle.swift in Sources */,
 				A98DFB6A2A361B31001630D0 /* ReviewCarousel.swift in Sources */,
 				A98DFB6E2A361C78001630D0 /* ProductCarousel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98DFB752A38ADBF001630D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98DFB7E2A38ADBF001630D0 /* ContentView.swift in Sources */,
+				A98DFB7C2A38ADBF001630D0 /* NixieTubeApp.swift in Sources */,
+				A98DFB882A38CCB8001630D0 /* NixieNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +606,67 @@
 			};
 			name = Release;
 		};
+		A98DFB842A38ADC1001630D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NixieTube/Preview Content\"";
+				DEVELOPMENT_TEAM = 8STHWE4QY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.swiftuibits.NixieTube;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A98DFB852A38ADC1001630D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NixieTube/Preview Content\"";
+				DEVELOPMENT_TEAM = 8STHWE4QY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.swiftuibits.NixieTube;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +693,15 @@
 			buildConfigurations = (
 				A958D9122A3500A7008C913F /* Debug */,
 				A958D9132A3500A7008C913F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98DFB862A38ADC1001630D0 /* Build configuration list for PBXNativeTarget "NixieTube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98DFB842A38ADC1001630D0 /* Debug */,
+				A98DFB852A38ADC1001630D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
