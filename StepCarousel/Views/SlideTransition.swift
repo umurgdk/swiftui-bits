@@ -35,7 +35,7 @@ struct SlideTransition: View {
                 VStack {
                     switch imageLoader.image(for: item) {
                     case .loading:
-                        ProgressView().controlSize(.large)
+                        ProgressView()
                     case .success(let image):
                         image.resizable().aspectRatio(contentMode: .fill)
                     case .failure:

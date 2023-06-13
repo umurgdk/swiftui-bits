@@ -17,7 +17,7 @@ struct ReviewCarouselButtonStyle: ButtonStyle {
         ZStack {
             Circle().fill(tint)
             image
-                .fontWeight(.bold)
+                .font(.system(size: 20, weight: .bold))
                 .foregroundColor(.primary.opacity(isEnabled ? 0.6 : 0.2))
         }
         .compositingGroup()

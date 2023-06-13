@@ -64,15 +64,11 @@ struct ReviewCarousel<Item: Identifiable, Content: View>: View {
 
     func showPrevious() {
         isTransitionForward = false
-        withAnimation {
-            itemIndex -= 1
-        }
+        itemIndex -= 1
     }
 
     func showNext() {
         isTransitionForward = true
-        withAnimation {
-            itemIndex += 1
-        }
+        itemIndex += 1
     }
 }

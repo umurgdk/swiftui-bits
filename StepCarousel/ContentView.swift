@@ -11,37 +11,36 @@ struct ContentView: View {
     @State var selectedReviewIndex = 0
     let tint = Color(red:0.94, green:0.94, blue:0.89)
 
+    @Environment(\.horizontalSizeClass) var horizontalSize
+
     var body: some View {
         HStack(spacing: 32) {
             ReviewCarousel(
                 items: reviews,
-                itemIndex: $selectedReviewIndex,
+                itemIndex: $selectedReviewIndex.animation(.easeInOut(duration: 2)),
                 tint: tint
             ) {
                 ReviewBody(review: $0, tint: tint)
             }
-            .frame(width: 350)
+            .frame(width: horizontalSize == .regular ? 350 : 250)
             .zIndex(2)
 
             ProductCarousel(
                 items: reviews.map(\.product),
                 itemIndex: selectedReviewIndex
-            ) { product, isPreview, width in
+            ) { product in
                 ProductCard(
                     product: product,
-                    tint: tint,
-                    width: width
-                ).redacted(reason: isPreview ? .placeholder : [])
+                    tint: tint
+                )
             }
             .cornerRadius(32)
             .clipped()
         }
-        .animation(.default, value: selectedReviewIndex)
-        .padding(40)
-        .frame(height: 500)
+        .padding(horizontalSize == .regular ? 40 : 16)
+        .frame(maxHeight: 500)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(white: 0.9))
-        .ignoresSafeArea()
+        .background(Color(white: 0.9).ignoresSafeArea())
     }
 }
 
