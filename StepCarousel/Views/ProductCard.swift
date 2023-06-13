@@ -48,13 +48,15 @@ struct ProductCard: View {
                     .fixedSize()
                 Text(product.name)
                     .font(.largeTitle)
-                    .fontWeight(.bold)
                     .fixedSize()
             }
+            .shadow(radius: 2, x: 0, y: 2)
+            .compositingGroup()
             .blur(radius: (1 - reveal) * 10)
             .opacity(reveal)
-            .padding(horizontalSize == .regular ? 32 : 24)
+            .padding(horizontalSize == .regular ? 32 : 16)
         }
+        .compositingGroup()
         .environment(\.colorScheme, .dark)
     }
 }

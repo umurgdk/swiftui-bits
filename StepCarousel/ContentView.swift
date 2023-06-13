@@ -14,10 +14,10 @@ struct ContentView: View {
     @Environment(\.horizontalSizeClass) var horizontalSize
 
     var body: some View {
-        HStack(spacing: 32) {
+        HStack(spacing: 24) {
             ReviewCarousel(
                 items: reviews,
-                itemIndex: $selectedReviewIndex.animation(.easeInOut(duration: 2)),
+                itemIndex: $selectedReviewIndex.animation(.easeOut(duration: 0.7)),
                 tint: tint
             ) {
                 ReviewBody(review: $0, tint: tint)
@@ -34,12 +34,12 @@ struct ContentView: View {
                     tint: tint
                 )
             }
-            .cornerRadius(32)
+            .cornerRadius(24)
             .clipped()
         }
-        .padding(horizontalSize == .regular ? 40 : 16)
+        .padding(24)
         .frame(maxHeight: 500)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background(Color(white: 0.9).ignoresSafeArea())
     }
 }

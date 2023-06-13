@@ -24,15 +24,13 @@ struct ReviewCarousel<Item: Identifiable, Content: View>: View {
     var body: some View {
         VStack(alignment: .leading) {
             Image(systemName: "quote.opening")
-                .font(.system(size: 56))
+                .font(.system(size: 40))
                 .foregroundColor(tint)
-                .padding(.top, 10)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, 16)
 
             contentBuilder(item)
-                .padding(.vertical, 16)
+                .padding(16)
                 .frame(maxHeight: .infinity, alignment: .top)
-                .padding(.horizontal, 24)
                 .compositingGroup()
                 .id(item.id)
                 .transition(
@@ -54,12 +52,12 @@ struct ReviewCarousel<Item: Identifiable, Content: View>: View {
             }
             .frame(height: 40)
             .frame(maxWidth: .infinity, alignment: .trailing)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 16)
         }
-        .padding(.vertical, 24)
+        .padding(.vertical, 16)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background(Color.white)
-        .cornerRadius(32)
+        .cornerRadius(24)
     }
 
     func showPrevious() {

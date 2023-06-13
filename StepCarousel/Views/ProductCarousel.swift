@@ -7,10 +7,27 @@
 
 import SwiftUI
 
-struct ProductCarousel<Item: Identifiable, Content: View>: View {
-    let items: [Item]
-    let itemIndex: Int
-    let contentBuilder: (Item) -> Content
+public struct ProductCarousel<Item: Identifiable, ItemView: View>: View {
+    public let items: [Item]
+    public let itemIndex: Int
+    public let contentBuilder: (Item) -> ItemView
+
+    public let previewWidth: Double
+    public let itemGap: Double
+
+    public init(
+        items: [Item],
+        itemIndex: Int,
+        @ViewBuilder contentBuilder: @escaping (Item) -> ItemView,
+        previewItemWidth: Double = 60,
+        itemGap: Double = 16
+    ) {
+        self.items = items
+        self.itemIndex = itemIndex
+        self.contentBuilder = contentBuilder
+        self.previewWidth = previewItemWidth
+        self.itemGap = itemGap
+    }
 
     var showPrevious: Bool { itemIndex == items.count - 1 && items.count > 1 }
     var showNext: Bool { itemIndex < items.count - 1 }
@@ -25,10 +42,8 @@ struct ProductCarousel<Item: Identifiable, Content: View>: View {
         return Array(startIndex...endIndex)
     }
 
-    let previewWidth: Double = 60
-    let itemGap: Double = 16
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { geom in
             HStack(spacing: itemGap) {
                 ForEach(itemIndices, id: \.self) { index in
@@ -42,28 +57,18 @@ struct ProductCarousel<Item: Identifiable, Content: View>: View {
                     .transition(
                         .productCarouselItem(
                             isPreview: isPreview(item),
-                            itemGap: itemGap,
-                            itemWidth: width
+                            itemWidth: width,
+                            previewWidth: previewWidth,
+                            itemGap: itemGap
                         )
                     )
-                    .transaction { trans in
-                        trans.isContinuous = true
-                    }
                 }
             }
         }
     }
 
-    func isPrevious(_ item: Item) -> Bool {
-        showPrevious && item.id == previousItem.id
-    }
-
-    func isNext(_ item: Item) -> Bool {
-        showNext && item.id == nextItem.id
-    }
-
     func isPreview(_ item: Item) -> Bool {
-        isPrevious(item) || isNext(item)
+        item.id != self.item.id
     }
 
     func itemWidth(for item: Item, in size: CGSize) -> Double {

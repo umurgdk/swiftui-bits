@@ -18,82 +18,65 @@ public extension EnvironmentValues {
     }
 }
 
-struct ProductCarouselTransition: ViewModifier {
+private struct ProductCarouselRevealTransition: ViewModifier {
+    var reveal: Double
+
+    func body(content: Content) -> some View {
+        content.environment(\.productCarouselReveal, reveal)
+    }
+}
+
+private struct ProductCarouselSizeTransition: ViewModifier {
     let isActive: Bool
-    let movement: Movement
-    let itemGap: Double
     let itemWidth: Double
+    let itemGap: Double
+    let previewWidth: Double
 
-    var reveal: Double { (isActive || movement.isPreview) ? 0 : 1 }
+    var isPreview: Bool {
+        itemWidth == previewWidth
+    }
 
-    enum Movement {
-        case insertFromRight
-        case insertFromLeft
-        case removeToLeft
-        case removeToRight
-
-        var isPreview: Bool {
-            self == .insertFromRight || self == .removeToRight
-        }
-
-        var alignment: Alignment {
-            switch self {
-            case .insertFromRight, .removeToRight: return .trailing
-            case .insertFromLeft, .removeToLeft: return .leading
-            }
-        }
-
-        func offset(itemGap: Double) -> Double {
-            switch self {
-            case .insertFromRight, .removeToRight: return 60 + itemGap
-            case .insertFromLeft, .removeToLeft: return -60 - itemGap
-            }
-        }
+    var offsetX : Double {
+        let offset = previewWidth + itemGap
+        return isPreview ? offset : -offset
     }
 
     func body(content: Content) -> some View {
         content
-            .environment(\.productCarouselReveal, reveal)
-            .frame(width: isActive ? 60 : itemWidth)
-            .cornerRadius(32)
+            .frame(width: isActive ? previewWidth : itemWidth)
+            .cornerRadius(24)
             .clipped()
-            .frame(maxWidth: itemWidth, alignment: movement.alignment)
-            .offset(x: isActive ? movement.offset(itemGap: itemGap) : 0, y: 0)
+            .frame(maxWidth: itemWidth, alignment: isPreview ? .center : .leading)
+            .offset(x: isActive ? offsetX : 0, y: 0)
     }
 }
 
 internal extension AnyTransition {
-    static func productCarouselItem(isPreview: Bool, itemGap: Double, itemWidth: Double) -> AnyTransition {
-        .asymmetric(
-            insertion: .modifier(
-                active: ProductCarouselTransition(
+    static func productCarouselItem(
+        isPreview: Bool,
+        itemWidth: Double,
+        previewWidth: Double,
+        itemGap: Double
+    ) -> AnyTransition {
+        .modifier(
+            active: ProductCarouselRevealTransition(reveal: 0),
+            identity: ProductCarouselRevealTransition(reveal: isPreview ? 0 : 1)
+        ).combined(
+            with: .modifier(
+                active: ProductCarouselSizeTransition(
                     isActive: true,
-                    movement: isPreview ? .insertFromRight : .insertFromLeft,
+                    itemWidth: itemWidth,
                     itemGap: itemGap,
-                    itemWidth: itemWidth
+                    previewWidth: previewWidth
                 ),
-                identity: ProductCarouselTransition(
+                identity: ProductCarouselSizeTransition(
                     isActive: false,
-                    movement: isPreview ? .insertFromRight : .insertFromLeft,
+                    itemWidth: itemWidth,
                     itemGap: itemGap,
-                    itemWidth: itemWidth
-                )
-            ),
-            removal: .modifier(
-                active: ProductCarouselTransition(
-                    isActive: true,
-                    movement: isPreview ? .removeToRight : .removeToLeft,
-                    itemGap: itemGap,
-                    itemWidth: itemWidth
-                ),
-                identity: ProductCarouselTransition(
-                    isActive: false,
-                    movement: isPreview ? .removeToRight : .removeToLeft,
-                    itemGap: itemGap,
-                    itemWidth: itemWidth
+                    previewWidth: previewWidth
                 )
             )
-        )
+        ).combined(with: .opacity)
     }
 }
 

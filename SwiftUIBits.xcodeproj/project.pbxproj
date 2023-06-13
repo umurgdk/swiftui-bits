@@ -19,7 +19,6 @@
 		A958D90D2A3500A7008C913F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A958D90C2A3500A7008C913F /* Assets.xcassets */; };
 		A958D9102A3500A7008C913F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A958D90F2A3500A7008C913F /* Preview Assets.xcassets */; };
 		A98DFB642A35EE73001630D0 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB632A35EE73001630D0 /* ImageLoader.swift */; };
-		A98DFB662A3601A4001630D0 /* SlideTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB652A3601A4001630D0 /* SlideTransition.swift */; };
 		A98DFB682A361B20001630D0 /* ReviewBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB672A361B20001630D0 /* ReviewBody.swift */; };
 		A98DFB6A2A361B31001630D0 /* ReviewCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB692A361B31001630D0 /* ReviewCarousel.swift */; };
 		A98DFB6C2A361B73001630D0 /* ReviewCarouselButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB6B2A361B73001630D0 /* ReviewCarouselButtonStyle.swift */; };
@@ -43,7 +42,6 @@
 		A958D90C2A3500A7008C913F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A958D90F2A3500A7008C913F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A98DFB632A35EE73001630D0 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		A98DFB652A3601A4001630D0 /* SlideTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransition.swift; sourceTree = "<group>"; };
 		A98DFB672A361B20001630D0 /* ReviewBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewBody.swift; sourceTree = "<group>"; };
 		A98DFB692A361B31001630D0 /* ReviewCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCarousel.swift; sourceTree = "<group>"; };
 		A98DFB6B2A361B73001630D0 /* ReviewCarouselButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCarouselButtonStyle.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 		A958D9142A3500CA008C913F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A98DFB652A3601A4001630D0 /* SlideTransition.swift */,
 				A98DFB672A361B20001630D0 /* ReviewBody.swift */,
 				A98DFB692A361B31001630D0 /* ReviewCarousel.swift */,
 				A98DFB6B2A361B73001630D0 /* ReviewCarouselButtonStyle.swift */,
@@ -268,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98DFB662A3601A4001630D0 /* SlideTransition.swift in Sources */,
 				A98DFB722A361CF8001630D0 /* Data.swift in Sources */,
 				A958D90B2A3500A5008C913F /* ContentView.swift in Sources */,
 				A98DFB742A387193001630D0 /* ProductCarouselTransition.swift in Sources */,
@@ -475,7 +471,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,7 +505,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

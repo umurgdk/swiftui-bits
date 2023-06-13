@@ -45,7 +45,6 @@ class ImageLoader: ObservableObject {
         self.images[url] = state
     }
 
-
     private nonisolated func fetch(url: URL) async {
         do {
             let (data, _) = try await self.urlSession.data(from: url)
