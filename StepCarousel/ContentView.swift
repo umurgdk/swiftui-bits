@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Components
 
 struct ContentView: View {
     @State var selectedReviewIndex = 0

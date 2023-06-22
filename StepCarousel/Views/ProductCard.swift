@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Components
 
 struct ProductCard: View {
     let product: Product

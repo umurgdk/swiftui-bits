@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Components
 
 struct ReviewBody: View {
     let review: Review

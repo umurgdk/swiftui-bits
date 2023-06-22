@@ -8,18 +8,26 @@
 import SwiftUI
 
 @MainActor
-class ImageLoader: ObservableObject {
-    enum ImageState {
+public class ImageLoader: ObservableObject {
+    public enum ImageState {
         case loading(Task<Void, Never>?)
         case success(Image)
         case failure
     }
 
-    @Published var images: [URL: ImageState] = [:]
+    @Published public var images: [URL: ImageState] = [:]
 
     private let urlSession: URLSession
-    public init(urlSession: URLSession = .shared) {
-        self.urlSession = urlSession
+    public init(urlSession: URLSession? = nil) {
+        if let session = urlSession {
+            self.urlSession = session
+        } else {
+            let cache = URLCache(memoryCapacity: 10_000_000, diskCapacity: 1_000_000_000)
+            let config = URLSessionConfiguration.default
+            config.urlCache = cache
+
+            self.urlSession = URLSession(configuration: config)
+        }
     }
 
     public func image(for url: URL) -> ImageState {
@@ -48,27 +56,33 @@ class ImageLoader: ObservableObject {
     private nonisolated func fetch(url: URL) async {
         do {
             let (data, _) = try await self.urlSession.data(from: url)
-            guard let image = UIImage(data: data) else {
+            guard let image = PlatformImage(data: data) else {
+                print("Failed to load image:", url)
                 await self.setImageState(.failure, for: url)
                 return
             }
 
-            await self.setImageState(.success(Image(uiImage: image)), for: url)
+            await self.setImageState(.success(Image(platformImage: image)), for: url)
         } catch {
+            print("Failed to load image:", url)
             await self.setImageState(.failure, for: url)
         }
     }
 }
 
-struct RemoteImage: View {
+public struct RemoteImage: View {
     let url: URL
     @EnvironmentObject var imageLoader: ImageLoader
 
-    var body: some View {
+    public init(url: URL) {
+        self.url = url
+    }
+
+    public var body: some View {
         ZStack {
             switch imageLoader.image(for: url) {
             case .loading:
-                ProgressView()
+                Backport.ProgressView()
             case .success(let image):
                 image
                     .resizable().aspectRatio(contentMode: .fill)
