@@ -1,6 +1,6 @@
 //
-//  WalletApp.swift
-//  Wallet
+//  VacuumApp.swift
+//  Vacuum
 //
 //  Created by Umur Gedik on 14.06.2023.
 //
@@ -10,7 +10,7 @@ import Components
 
 @main
 @MainActor
-struct WalletApp: App {
+struct VacuumApp: App {
     let imageLoader = ImageLoader()
     @State var time: Float = 0.5
 

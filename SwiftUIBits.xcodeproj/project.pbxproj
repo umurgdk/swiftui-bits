@@ -15,7 +15,7 @@
 		A91E6D552A41DEFC00CD0034 /* Image+MTLTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E6D532A41DEF800CD0034 /* Image+MTLTexture.swift */; };
 		A91E6D592A41F89D00CD0034 /* MTLTypedBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E6D582A41F89D00CD0034 /* MTLTypedBuffer.swift */; };
 		A91E6D5B2A42010700CD0034 /* View+GlobalFramePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E6D5A2A42010700CD0034 /* View+GlobalFramePreference.swift */; };
-		A924975F2A39E0F900A22B6E /* WalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924975A2A39E0F800A22B6E /* WalletApp.swift */; };
+		A924975F2A39E0F900A22B6E /* VacuumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924975A2A39E0F800A22B6E /* VacuumApp.swift */; };
 		A92497602A39E0F900A22B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A924975B2A39E0F800A22B6E /* Assets.xcassets */; };
 		A92497612A39E0F900A22B6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A924975D2A39E0F900A22B6E /* Preview Assets.xcassets */; };
 		A92497622A39E0F900A22B6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924975E2A39E0F900A22B6E /* ContentView.swift */; };
@@ -25,7 +25,6 @@
 		A92497742A3A105D00A22B6E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB632A35EE73001630D0 /* ImageLoader.swift */; };
 		A92497762A3A10A300A22B6E /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92497682A3A105300A22B6E /* Components.framework */; };
 		A92497772A3A10A300A22B6E /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A92497682A3A105300A22B6E /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A924977C2A3A129300A22B6E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924977B2A3A129300A22B6E /* Data.swift */; };
 		A924977E2A3A142E00A22B6E /* Chunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924977D2A3A142E00A22B6E /* Chunks.swift */; };
 		A92497802A3A335E00A22B6E /* View+RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924977F2A3A335E00A22B6E /* View+RenderImage.swift */; };
 		A92497822A3A344600A22B6E /* ScrollView+offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92497812A3A344600A22B6E /* ScrollView+offset.swift */; };
@@ -114,13 +113,12 @@
 		A91E6D532A41DEF800CD0034 /* Image+MTLTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+MTLTexture.swift"; sourceTree = "<group>"; };
 		A91E6D582A41F89D00CD0034 /* MTLTypedBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLTypedBuffer.swift; sourceTree = "<group>"; };
 		A91E6D5A2A42010700CD0034 /* View+GlobalFramePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+GlobalFramePreference.swift"; sourceTree = "<group>"; };
-		A924975A2A39E0F800A22B6E /* WalletApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletApp.swift; sourceTree = "<group>"; };
+		A924975A2A39E0F800A22B6E /* VacuumApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VacuumApp.swift; sourceTree = "<group>"; };
 		A924975B2A39E0F800A22B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A924975D2A39E0F900A22B6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A924975E2A39E0F900A22B6E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A92497682A3A105300A22B6E /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A924976A2A3A105300A22B6E /* Components.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
-		A924977B2A3A129300A22B6E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A924977D2A3A142E00A22B6E /* Chunks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chunks.swift; sourceTree = "<group>"; };
 		A924977F2A3A335E00A22B6E /* View+RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+RenderImage.swift"; sourceTree = "<group>"; };
 		A92497812A3A344600A22B6E /* ScrollView+offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+offset.swift"; sourceTree = "<group>"; };
@@ -220,11 +218,10 @@
 			children = (
 				A98D727D2A43BB98003646C8 /* Views */,
 				A91E6D312A3DECBE00CD0034 /* VacuumScene */,
-				A924975A2A39E0F800A22B6E /* WalletApp.swift */,
+				A924975A2A39E0F800A22B6E /* VacuumApp.swift */,
 				A924975B2A39E0F800A22B6E /* Assets.xcassets */,
 				A924975C2A39E0F900A22B6E /* Preview Content */,
 				A924975E2A39E0F900A22B6E /* ContentView.swift */,
-				A924977B2A3A129300A22B6E /* Data.swift */,
 				A91E6D2D2A3BD61D00CD0034 /* BridgingHeader.h */,
 			);
 			path = Vacuum;
@@ -652,9 +649,8 @@
 				A91E6D362A40B48600CD0034 /* DetailedPlane.swift in Sources */,
 				A91E6D592A41F89D00CD0034 /* MTLTypedBuffer.swift in Sources */,
 				A91E6D552A41DEFC00CD0034 /* Image+MTLTexture.swift in Sources */,
-				A924977C2A3A129300A22B6E /* Data.swift in Sources */,
 				A91E6D302A3DEC9900CD0034 /* ClothShader.metal in Sources */,
-				A924975F2A39E0F900A22B6E /* WalletApp.swift in Sources */,
+				A924975F2A39E0F900A22B6E /* VacuumApp.swift in Sources */,
 				A95A3B232A4470D000641BF6 /* VacuumMouth.swift in Sources */,
 				A91E6D292A3A9ECD00CD0034 /* VacuumScene.swift in Sources */,
 				A98D727F2A43BBBC003646C8 /* VacuumLayout.swift in Sources */,
@@ -1080,7 +1076,6 @@
 				DEVELOPMENT_TEAM = 8STHWE4QY7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Hebele Hubele";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1117,7 +1112,6 @@
 				DEVELOPMENT_TEAM = 8STHWE4QY7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Hebele Hubele";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
