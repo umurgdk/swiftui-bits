@@ -42,6 +42,11 @@
 		A95A3B232A4470D000641BF6 /* VacuumMouth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B222A4470D000641BF6 /* VacuumMouth.swift */; };
 		A95A3B252A4470F300641BF6 /* AlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B242A4470F300641BF6 /* AlbumScreen.swift */; };
 		A95A3B272A44711700641BF6 /* AlbumGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B262A44711700641BF6 /* AlbumGrid.swift */; };
+		A95A3B2F2A44790200641BF6 /* FlyerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B2E2A44790200641BF6 /* FlyerApp.swift */; };
+		A95A3B312A44790200641BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B302A44790200641BF6 /* ContentView.swift */; };
+		A95A3B332A44790400641BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95A3B322A44790400641BF6 /* Assets.xcassets */; };
+		A95A3B362A44790400641BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95A3B352A44790400641BF6 /* Preview Assets.xcassets */; };
+		A95A3B3B2A44876800641BF6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B3A2A44876800641BF6 /* AppState.swift */; };
 		A98D727F2A43BBBC003646C8 /* VacuumLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D727E2A43BBBC003646C8 /* VacuumLayout.swift */; };
 		A98D72812A43DF08003646C8 /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D72802A43DF08003646C8 /* Backport.swift */; };
 		A98DFB682A361B20001630D0 /* ReviewBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98DFB672A361B20001630D0 /* ReviewBody.swift */; };
@@ -137,6 +142,12 @@
 		A95A3B222A4470D000641BF6 /* VacuumMouth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacuumMouth.swift; sourceTree = "<group>"; };
 		A95A3B242A4470F300641BF6 /* AlbumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumScreen.swift; sourceTree = "<group>"; };
 		A95A3B262A44711700641BF6 /* AlbumGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumGrid.swift; sourceTree = "<group>"; };
+		A95A3B2C2A44790100641BF6 /* Flyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95A3B2E2A44790200641BF6 /* FlyerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyerApp.swift; sourceTree = "<group>"; };
+		A95A3B302A44790200641BF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A95A3B322A44790400641BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A95A3B352A44790400641BF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A95A3B3A2A44876800641BF6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A98D727E2A43BBBC003646C8 /* VacuumLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacuumLayout.swift; sourceTree = "<group>"; };
 		A98D72802A43DF08003646C8 /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
 		A98DFB632A35EE73001630D0 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -178,6 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92497762A3A10A300A22B6E /* Components.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95A3B292A44790100641BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +279,7 @@
 		A9396E522A320B95006C8AF9 = {
 			isa = PBXGroup;
 			children = (
+				A95A3B2D2A44790200641BF6 /* Flyer */,
 				A92497592A39E0F800A22B6E /* Vacuum */,
 				A958D8F02A34E358008C913F /* Heater */,
 				A958D9072A3500A5008C913F /* StepCarousel */,
@@ -279,6 +298,7 @@
 				A98DFB792A38ADBF001630D0 /* NixieTube.app */,
 				A98DFB8D2A39D106001630D0 /* Vacuum.app */,
 				A92497682A3A105300A22B6E /* Components.framework */,
+				A95A3B2C2A44790100641BF6 /* Flyer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,6 +365,26 @@
 				A98DFB732A387193001630D0 /* ProductCarouselTransition.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A95A3B2D2A44790200641BF6 /* Flyer */ = {
+			isa = PBXGroup;
+			children = (
+				A95A3B2E2A44790200641BF6 /* FlyerApp.swift */,
+				A95A3B302A44790200641BF6 /* ContentView.swift */,
+				A95A3B322A44790400641BF6 /* Assets.xcassets */,
+				A95A3B342A44790400641BF6 /* Preview Content */,
+				A95A3B3A2A44876800641BF6 /* AppState.swift */,
+			);
+			path = Flyer;
+			sourceTree = "<group>";
+		};
+		A95A3B342A44790400641BF6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A95A3B352A44790400641BF6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		A98D727D2A43BB98003646C8 /* Views */ = {
@@ -454,6 +494,23 @@
 			productReference = A958D9062A3500A5008C913F /* StepCarousel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A95A3B2B2A44790100641BF6 /* Flyer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A95A3B392A44790400641BF6 /* Build configuration list for PBXNativeTarget "Flyer" */;
+			buildPhases = (
+				A95A3B282A44790100641BF6 /* Sources */,
+				A95A3B292A44790100641BF6 /* Frameworks */,
+				A95A3B2A2A44790100641BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flyer;
+			productName = Flyer;
+			productReference = A95A3B2C2A44790100641BF6 /* Flyer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A98DFB782A38ADBF001630D0 /* NixieTube */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A98DFB862A38ADC1001630D0 /* Build configuration list for PBXNativeTarget "NixieTube" */;
@@ -510,6 +567,9 @@
 					A958D9052A3500A5008C913F = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					A95A3B2B2A44790100641BF6 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					A98DFB782A38ADBF001630D0 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -536,6 +596,7 @@
 				A98DFB782A38ADBF001630D0 /* NixieTube */,
 				A98DFB8C2A39D106001630D0 /* Vacuum */,
 				A92497672A3A105300A22B6E /* Components */,
+				A95A3B2B2A44790100641BF6 /* Flyer */,
 			);
 		};
 /* End PBXProject section */
@@ -563,6 +624,15 @@
 			files = (
 				A958D9102A3500A7008C913F /* Preview Assets.xcassets in Resources */,
 				A958D90D2A3500A7008C913F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95A3B2A2A44790100641BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95A3B362A44790400641BF6 /* Preview Assets.xcassets in Resources */,
+				A95A3B332A44790400641BF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +697,16 @@
 				A98DFB6C2A361B73001630D0 /* ReviewCarouselButtonStyle.swift in Sources */,
 				A98DFB6A2A361B31001630D0 /* ReviewCarousel.swift in Sources */,
 				A98DFB6E2A361C78001630D0 /* ProductCarousel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A95A3B282A44790100641BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95A3B3B2A44876800641BF6 /* AppState.swift in Sources */,
+				A95A3B312A44790200641BF6 /* ContentView.swift in Sources */,
+				A95A3B2F2A44790200641BF6 /* FlyerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1083,71 @@
 			};
 			name = Release;
 		};
+		A95A3B372A44790400641BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Flyer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8STHWE4QY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Always show weather information for your current location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.swiftuibits.Flyer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A95A3B382A44790400641BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Flyer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8STHWE4QY7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Always show weather information for your current location";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.umurgdk.swiftuibits.Flyer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A98DFB842A38ADC1001630D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1172,6 +1317,15 @@
 			buildConfigurations = (
 				A958D9122A3500A7008C913F /* Debug */,
 				A958D9132A3500A7008C913F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A95A3B392A44790400641BF6 /* Build configuration list for PBXNativeTarget "Flyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95A3B372A44790400641BF6 /* Debug */,
+				A95A3B382A44790400641BF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
