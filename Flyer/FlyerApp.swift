@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MetalUI
 
 @MainActor
 @main
@@ -36,35 +37,21 @@ struct FlyerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Group {
-                if isOnboarded {
-                    ContentView().environmentObject(state)
-                } else {
-                    OnboardingView().environmentObject(state)
-                }
-            }
+            MainView().environmentObject(state)
         }
     }
 }
 
-
-struct OnboardingView: View {
+struct MainView: View {
     @EnvironmentObject var appState: AppState
 
     var body: some View {
-        VStack {
-            Text("We can always show the weather information in your current location.")
-
-            Spacer()
-
-            Button("Enable Location Weather") {
-                appState.requestLocationAccess()
-                appState.isOnboarded = true
-            }
-
-            Button("Skip") {
-                appState.isOnboarded = true
-            }
-        }.scenePadding()
+        if appState.isOnboarded {
+            MUIRenderProvider(edgesIgnoringSafeArea: .all) {
+                LocationsScreen()
+            }.transition(.move(edge: .leading))
+        } else {
+            OnboardingScreen().transition(.move(edge: .leading))
+        }
     }
 }

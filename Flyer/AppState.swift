@@ -7,16 +7,7 @@
 
 import Foundation
 import CoreLocation
-
-enum WeatherAPIError: Error {
-    case network(URLError?)
-    case notFound(Location)
-}
-
-enum AppError: Error {
-    case weatherAPIError(WeatherAPIError)
-    case unexpected(underlying: Error)
-}
+import Components
 
 @MainActor
 final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
@@ -28,6 +19,8 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     @Published var temperatures: [Location.ID: Measurement<UnitTemperature>]
     @Published var error: AppError?
+
+    var temperatureInfoExpirationInterval: TimeInterval
 
     var locationPermissionGranted: Bool? {
         didSet {
@@ -57,7 +50,12 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let urlSession: URLSession
     private let geocoder = CLGeocoder()
 
-    private var temperatureRequests: Set<Location.ID> = []
+    private var temperatureRequestedAt: [Location.ID: Date] = [:]
+    private var temperatureRequests: Set<Location.ID> = [] {
+        didSet {
+            print("Requesting weather for:", temperatureRequests.compactMap { id in locations.first(where: { $0.id == id }) }.map(\.name))
+        }
+    }
     private let locationManager: CLLocationManager
     private var userLocation: CLLocationCoordinate2D?
 
@@ -66,6 +64,7 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationPermissionGranted: Bool? = nil,
         locations: [Location] = [],
         temperatures: [Location.ID: Measurement<UnitTemperature>] = [:],
+        temperatureInfoExpirationInterval: TimeInterval = 60 * 5, // Five minutes
         urlSession: URLSession = .shared,
         locationManager: CLLocationManager = .init()
     ) {
@@ -74,6 +73,7 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.temperatures = temperatures
         self.urlSession = urlSession
         self.locationManager = locationManager
+        self.temperatureInfoExpirationInterval = temperatureInfoExpirationInterval
 
         super.init()
 
@@ -90,9 +90,15 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func addLocation(_ location: Location, transient: Bool = false) {
+        guard !locations.contains(where: { $0.name == location.name }) else { return }
+        
         var location = location
         location.transient = transient
-        locations.insert(location, at: 0)
+        if let firstLocation = locations.first, firstLocation.transient {
+            locations.insert(location, at: 1)
+        } else {
+            locations.insert(location, at: 0)
+        }
     }
 
     func addUserLocationIfNeeded() async throws {
@@ -139,31 +145,25 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func fetchTemperatures() async throws {
-        let locations = self.locations.filter {
-            !temperatureRequests.contains($0.id)
+        let locations = self.locations.filter { location in
+            let requestInFly = temperatureRequests.contains(location.id)
+            let isExpired = Date().timeIntervalSince(temperatureRequestedAt[location.id] ?? .distantPast) >= temperatureInfoExpirationInterval
+            return !requestInFly && isExpired
         }
+
+        temperatureRequests.formUnion(locations.map(\.id))
 
         defer { temperatureRequests.subtract(locations.map(\.id)) }
 
-        let results = try await withThrowingTaskGroup(of: (Location, Double).self) { group in
-            for location in locations {
-                _ = group.addTaskUnlessCancelled {
-                    let temperature = try await self.fetchTemperature(for: location)
-                    return (location, temperature)
-                }
-            }
-
-
-            var results: [(Location, Double)] = []
-            for try await result in group {
-                results.append(result)
-            }
-
-            return results
+        let results = try await locations.asyncMap { location in
+            let temperature = try await self.fetchTemperature(for: location)
+            return (location, temperature)
         }
 
+        let requestedAt = Date()
         for (location, temperature) in results {
             temperatures[location.id] = .init(value: temperature, unit: .celsius)
+            temperatureRequestedAt[location.id] = requestedAt
         }
     }
 
@@ -174,12 +174,17 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
             struct CurrentWeather: Decodable {
                 let temperature: Double
             }
+
+            enum CodingKeys: String, CodingKey {
+                case currentWeather = "current_weather"
+            }
         }
 
         var urlComponents = URLComponents(string: "https://api.open-meteo.com/v1/forecast")!
         urlComponents.queryItems = [
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
-            URLQueryItem(name: "longitude", value: String(location.coordinate.longitude))
+            URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
+            URLQueryItem(name: "current_weather", value: "true")
         ]
 
         do {
@@ -206,19 +211,10 @@ final class AppState: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 }
 
-struct Location: Codable, Identifiable, Sendable {
-    public let name: String
-    public let country: String
-    public let coordinate: LocationCoordinate
-    fileprivate var transient: Bool
-
-    public var id: LocationCoordinate { coordinate }
-}
-
 fileprivate extension Location {
     init?(from placemark: CLPlacemark, transient: Bool) {
         guard
-            let name = placemark.name,
+            let name = placemark.locality,
             let country = placemark.country,
             let location = placemark.location
         else {
@@ -232,16 +228,11 @@ fileprivate extension Location {
     }
 }
 
-struct LocationCoordinate: Codable, Hashable, Sendable {
-    let latitude: Double
-    let longitude: Double
-
-    fileprivate var coreLocation: CLLocationCoordinate2D {
+fileprivate extension LocationCoordinate {
+    var coreLocation: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
-}
 
-fileprivate extension LocationCoordinate {
     init(from location: CLLocationCoordinate2D) {
         self.latitude = location.latitude
         self.longitude = location.longitude
@@ -255,6 +246,7 @@ extension AppState: Codable {
         case isOnboarded
         case locations
         case locationPermissionGranted
+        case temperatureInfoExpirationInterval
     }
 
     func encode(to encoder: Encoder) throws {
@@ -264,6 +256,7 @@ extension AppState: Codable {
         try container.encode(isOnboarded, forKey: .isOnboarded)
         try container.encode(nonTransientLocations, forKey: .locations)
         try container.encode(locationPermissionGranted, forKey: .locationPermissionGranted)
+        try container.encode(temperatureInfoExpirationInterval, forKey: .temperatureInfoExpirationInterval)
     }
 
     convenience init(from decoder: Decoder) throws {
@@ -271,7 +264,8 @@ extension AppState: Codable {
         self.init(
             isOnboarded: try container.decode(Bool.self, forKey: .isOnboarded),
             locationPermissionGranted: try container.decodeIfPresent(Bool.self, forKey: .locationPermissionGranted),
-            locations: try container.decode([Location].self, forKey: .locations)
+            locations: try container.decode([Location].self, forKey: .locations),
+            temperatureInfoExpirationInterval: try container.decodeIfPresent(TimeInterval.self, forKey: .temperatureInfoExpirationInterval) ?? 60 * 5
         )
     }
 }

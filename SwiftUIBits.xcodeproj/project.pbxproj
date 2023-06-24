@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9124CB02A45DAD2008D623C /* Collection+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CAF2A45DAD2008D623C /* Collection+SwiftUI.swift */; };
+		A9124CB32A45E71C008D623C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CB22A45E71C008D623C /* Location.swift */; };
+		A9124CB52A45E732008D623C /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CB42A45E732008D623C /* LocationCoordinate.swift */; };
+		A9124CB72A45E77E008D623C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CB62A45E77E008D623C /* AppError.swift */; };
+		A9124CB92A45EBFE008D623C /* AsyncMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CB82A45EBFE008D623C /* AsyncMap.swift */; };
+		A9124CBE2A45EE8B008D623C /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CBD2A45EE8B008D623C /* LocationList.swift */; };
+		A9124CC02A45EF69008D623C /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CBF2A45EF69008D623C /* LocationRow.swift */; };
+		A9124CC22A45EF8E008D623C /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CC12A45EF8E008D623C /* PreviewData.swift */; };
+		A9124CC32A45F0AF008D623C /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92497682A3A105300A22B6E /* Components.framework */; };
+		A9124CC42A45F0AF008D623C /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A92497682A3A105300A22B6E /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9124CC92A45F1AC008D623C /* AddLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CC82A45F1AC008D623C /* AddLocationScreen.swift */; };
+		A9124CCB2A45F1E8008D623C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CCA2A45F1E8008D623C /* ErrorView.swift */; };
+		A9124CCD2A45F57E008D623C /* LocationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CCC2A45F57E008D623C /* LocationsScreen.swift */; };
+		A9124CCF2A45F5BF008D623C /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CCE2A45F5BF008D623C /* OnboardingScreen.swift */; };
+		A9124CD12A45F6EC008D623C /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9124CD02A45F6EC008D623C /* Formatters.swift */; };
 		A91E6D292A3A9ECD00CD0034 /* VacuumScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E6D282A3A9ECD00CD0034 /* VacuumScene.swift */; };
 		A91E6D2B2A3AAF8800CD0034 /* View+SizePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91E6D2A2A3AAF8800CD0034 /* View+SizePreference.swift */; };
 		A91E6D302A3DEC9900CD0034 /* ClothShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A91E6D2F2A3DEC9900CD0034 /* ClothShader.metal */; };
@@ -28,6 +43,7 @@
 		A924977E2A3A142E00A22B6E /* Chunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924977D2A3A142E00A22B6E /* Chunks.swift */; };
 		A92497802A3A335E00A22B6E /* View+RenderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924977F2A3A335E00A22B6E /* View+RenderImage.swift */; };
 		A92497822A3A344600A22B6E /* ScrollView+offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92497812A3A344600A22B6E /* ScrollView+offset.swift */; };
+		A940D3A62A4661AA00822338 /* MetalUI in Frameworks */ = {isa = PBXBuildFile; productRef = A940D3A52A4661AA00822338 /* MetalUI */; };
 		A958D8F22A34E358008C913F /* HeaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958D8F12A34E358008C913F /* HeaterApp.swift */; };
 		A958D8F42A34E358008C913F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A958D8F32A34E358008C913F /* ContentView.swift */; };
 		A958D8F62A34E359008C913F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A958D8F52A34E359008C913F /* Assets.xcassets */; };
@@ -43,7 +59,6 @@
 		A95A3B252A4470F300641BF6 /* AlbumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B242A4470F300641BF6 /* AlbumScreen.swift */; };
 		A95A3B272A44711700641BF6 /* AlbumGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B262A44711700641BF6 /* AlbumGrid.swift */; };
 		A95A3B2F2A44790200641BF6 /* FlyerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B2E2A44790200641BF6 /* FlyerApp.swift */; };
-		A95A3B312A44790200641BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B302A44790200641BF6 /* ContentView.swift */; };
 		A95A3B332A44790400641BF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95A3B322A44790400641BF6 /* Assets.xcassets */; };
 		A95A3B362A44790400641BF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95A3B352A44790400641BF6 /* Preview Assets.xcassets */; };
 		A95A3B3B2A44876800641BF6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A3B3A2A44876800641BF6 /* AppState.swift */; };
@@ -66,6 +81,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A9124CC52A45F0AF008D623C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9396E532A320B95006C8AF9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A92497672A3A105300A22B6E;
+			remoteInfo = Components;
+		};
 		A924976C2A3A105300A22B6E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9396E532A320B95006C8AF9 /* Project object */;
@@ -83,6 +105,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A9124CC72A45F0AF008D623C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9124CC42A45F0AF008D623C /* Components.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A92497732A3A105300A22B6E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,6 +141,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A9124CAF2A45DAD2008D623C /* Collection+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SwiftUI.swift"; sourceTree = "<group>"; };
+		A9124CB22A45E71C008D623C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A9124CB42A45E732008D623C /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
+		A9124CB62A45E77E008D623C /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A9124CB82A45EBFE008D623C /* AsyncMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncMap.swift; sourceTree = "<group>"; };
+		A9124CBD2A45EE8B008D623C /* LocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
+		A9124CBF2A45EF69008D623C /* LocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
+		A9124CC12A45EF8E008D623C /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		A9124CC82A45F1AC008D623C /* AddLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationScreen.swift; sourceTree = "<group>"; };
+		A9124CCA2A45F1E8008D623C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		A9124CCC2A45F57E008D623C /* LocationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsScreen.swift; sourceTree = "<group>"; };
+		A9124CCE2A45F5BF008D623C /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		A9124CD02A45F6EC008D623C /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		A91E6D282A3A9ECD00CD0034 /* VacuumScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacuumScene.swift; sourceTree = "<group>"; };
 		A91E6D2A2A3AAF8800CD0034 /* View+SizePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SizePreference.swift"; sourceTree = "<group>"; };
 		A91E6D2C2A3BD5D800CD0034 /* ShaderDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderDefinitions.h; sourceTree = "<group>"; };
@@ -128,6 +174,7 @@
 		A924977F2A3A335E00A22B6E /* View+RenderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+RenderImage.swift"; sourceTree = "<group>"; };
 		A92497812A3A344600A22B6E /* ScrollView+offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+offset.swift"; sourceTree = "<group>"; };
 		A9396E6E2A320C0E006C8AF9 /* LiquidTube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidTube.swift; sourceTree = "<group>"; };
+		A940D3A42A46615100822338 /* MetalUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MetalUI; sourceTree = "<group>"; };
 		A958D8EF2A34E358008C913F /* Heater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A958D8F12A34E358008C913F /* HeaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterApp.swift; sourceTree = "<group>"; };
 		A958D8F32A34E358008C913F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,7 +191,6 @@
 		A95A3B262A44711700641BF6 /* AlbumGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumGrid.swift; sourceTree = "<group>"; };
 		A95A3B2C2A44790100641BF6 /* Flyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95A3B2E2A44790200641BF6 /* FlyerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyerApp.swift; sourceTree = "<group>"; };
-		A95A3B302A44790200641BF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A95A3B322A44790400641BF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A95A3B352A44790400641BF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A95A3B3A2A44876800641BF6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -196,6 +242,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A940D3A62A4661AA00822338 /* MetalUI in Frameworks */,
+				A9124CC32A45F0AF008D623C /* Components.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +265,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9124CB12A45E705008D623C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A9124CB22A45E71C008D623C /* Location.swift */,
+				A9124CB42A45E732008D623C /* LocationCoordinate.swift */,
+				A9124CB62A45E77E008D623C /* AppError.swift */,
+				A9124CD02A45F6EC008D623C /* Formatters.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A9124CBA2A45EE74008D623C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9124CCC2A45F57E008D623C /* LocationsScreen.swift */,
+				A9124CBD2A45EE8B008D623C /* LocationList.swift */,
+				A9124CBF2A45EF69008D623C /* LocationRow.swift */,
+				A9124CC82A45F1AC008D623C /* AddLocationScreen.swift */,
+				A9124CCA2A45F1E8008D623C /* ErrorView.swift */,
+				A9124CCE2A45F5BF008D623C /* OnboardingScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A91E6D312A3DECBE00CD0034 /* VacuumScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +337,8 @@
 				A91E6D5A2A42010700CD0034 /* View+GlobalFramePreference.swift */,
 				A9BABFAB2A43438300480EE5 /* CrossPlatform.swift */,
 				A98D72802A43DF08003646C8 /* Backport.swift */,
+				A9124CAF2A45DAD2008D623C /* Collection+SwiftUI.swift */,
+				A9124CB82A45EBFE008D623C /* AsyncMap.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -279,6 +353,7 @@
 		A9396E522A320B95006C8AF9 = {
 			isa = PBXGroup;
 			children = (
+				A940D3A42A46615100822338 /* MetalUI */,
 				A95A3B2D2A44790200641BF6 /* Flyer */,
 				A92497592A39E0F800A22B6E /* Vacuum */,
 				A958D8F02A34E358008C913F /* Heater */,
@@ -370,8 +445,9 @@
 		A95A3B2D2A44790200641BF6 /* Flyer */ = {
 			isa = PBXGroup;
 			children = (
+				A9124CBA2A45EE74008D623C /* Views */,
+				A9124CB12A45E705008D623C /* Domain */,
 				A95A3B2E2A44790200641BF6 /* FlyerApp.swift */,
-				A95A3B302A44790200641BF6 /* ContentView.swift */,
 				A95A3B322A44790400641BF6 /* Assets.xcassets */,
 				A95A3B342A44790400641BF6 /* Preview Content */,
 				A95A3B3A2A44876800641BF6 /* AppState.swift */,
@@ -383,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				A95A3B352A44790400641BF6 /* Preview Assets.xcassets */,
+				A9124CC12A45EF8E008D623C /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -501,12 +578,17 @@
 				A95A3B282A44790100641BF6 /* Sources */,
 				A95A3B292A44790100641BF6 /* Frameworks */,
 				A95A3B2A2A44790100641BF6 /* Resources */,
+				A9124CC72A45F0AF008D623C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9124CC62A45F0AF008D623C /* PBXTargetDependency */,
 			);
 			name = Flyer;
+			packageProductDependencies = (
+				A940D3A52A4661AA00822338 /* MetalUI */,
+			);
 			productName = Flyer;
 			productReference = A95A3B2C2A44790100641BF6 /* Flyer.app */;
 			productType = "com.apple.product-type.application";
@@ -556,7 +638,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					A92497672A3A105300A22B6E = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -663,12 +745,14 @@
 			files = (
 				A9BABFAC2A43438300480EE5 /* CrossPlatform.swift in Sources */,
 				A91E6D2B2A3AAF8800CD0034 /* View+SizePreference.swift in Sources */,
+				A9124CB02A45DAD2008D623C /* Collection+SwiftUI.swift in Sources */,
 				A92497742A3A105D00A22B6E /* ImageLoader.swift in Sources */,
 				A92497802A3A335E00A22B6E /* View+RenderImage.swift in Sources */,
 				A92497822A3A344600A22B6E /* ScrollView+offset.swift in Sources */,
 				A91E6D5B2A42010700CD0034 /* View+GlobalFramePreference.swift in Sources */,
 				A924977E2A3A142E00A22B6E /* Chunks.swift in Sources */,
 				A98D72812A43DF08003646C8 /* Backport.swift in Sources */,
+				A9124CB92A45EBFE008D623C /* AsyncMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,8 +789,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95A3B3B2A44876800641BF6 /* AppState.swift in Sources */,
-				A95A3B312A44790200641BF6 /* ContentView.swift in Sources */,
+				A9124CD12A45F6EC008D623C /* Formatters.swift in Sources */,
+				A9124CB52A45E732008D623C /* LocationCoordinate.swift in Sources */,
+				A9124CB72A45E77E008D623C /* AppError.swift in Sources */,
+				A9124CCD2A45F57E008D623C /* LocationsScreen.swift in Sources */,
+				A9124CC92A45F1AC008D623C /* AddLocationScreen.swift in Sources */,
+				A9124CB32A45E71C008D623C /* Location.swift in Sources */,
+				A9124CC22A45EF8E008D623C /* PreviewData.swift in Sources */,
+				A9124CC02A45EF69008D623C /* LocationRow.swift in Sources */,
 				A95A3B2F2A44790200641BF6 /* FlyerApp.swift in Sources */,
+				A9124CCF2A45F5BF008D623C /* OnboardingScreen.swift in Sources */,
+				A9124CBE2A45EE8B008D623C /* LocationList.swift in Sources */,
+				A9124CCB2A45F1E8008D623C /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +836,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A9124CC62A45F0AF008D623C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A92497672A3A105300A22B6E /* Components */;
+			targetProxy = A9124CC52A45F0AF008D623C /* PBXContainerItemProxy */;
+		};
 		A924976D2A3A105300A22B6E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilters = (
@@ -762,6 +861,7 @@
 		A92497712A3A105300A22B6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -801,6 +901,7 @@
 		A92497722A3A105300A22B6E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -871,6 +972,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -931,6 +1033,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1086,11 +1189,12 @@
 		A95A3B372A44790400641BF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Flyer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Flyer/Preview\\ Content Flyer/Preview\\ Content/PreviewData.swift";
 				DEVELOPMENT_TEAM = 8STHWE4QY7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1100,7 +1204,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1118,11 +1222,12 @@
 		A95A3B382A44790400641BF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Flyer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Flyer/Preview\\ Content Flyer/Preview\\ Content/PreviewData.swift";
 				DEVELOPMENT_TEAM = 8STHWE4QY7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1132,7 +1237,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1349,6 +1454,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A940D3A52A4661AA00822338 /* MetalUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9396E532A320B95006C8AF9 /* Project object */;
 }
